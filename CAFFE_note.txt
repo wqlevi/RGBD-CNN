@@ -1,0 +1,11 @@
+[OVERVIEW]
+1. Prepare the dataset: .PNG, .jpg and your label shall be transfered to caffe format, e.g. LMDB.
+2. Draft the network file: .prototxt, which contains how many layers inside the net and what's the specific paras.
+3. Key network sovler: solver.prototxt, which contains how many time to iterate,etc.
+[DATASET]
+1.Prefered LMDB format can easily be created at ~/caffe/examples/imagenet/creat_imagenet.sh
+2.Training method:
+    1) Straightly train with "$CAFFE_TOOL/caffe  train --solver=solver.prototxt -gup all"
+    2) Using fine-tuning with "$CAFFE_TOOL/caffe train --solver=solver.prototxt -weight net.caffemodel" #net.caffemodel is a fine-tuned model
+3.Python port:
+    
