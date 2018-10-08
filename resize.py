@@ -27,9 +27,16 @@ def readf():
 				img = img.resize((int(img_size),int(img_size)),Image.ANTIALIAS)
 				fname,extension = os.path.splitext(d)
 				newfile = fname+extension
-				if extension != ".jpg":
-				   newfile = fname + ".jpg"
-				img.save(os.path.join(output_dir+'/'+x,newfile),"JPEG",quality=90)
+				if extension != ".png":
+				#Uncomment to use .jpg				
+				#if extension != ".jpg":
+				   newfile = fname + ".png"
+				   #Uncomment to use .jpg
+				   #newfile = fname + ".jpg"
+				#Uncomment to resize .png format
+				img.save(os.path.join(output_dir+'/'+x,newfile))
+				#Uncomment to resize .jpg format				
+				#img.save(os.path.join(output_dir+'/'+x,newfile),"JPEG",quality=90)
 				print "Resizing file : %s - %s" %(x,d)
 
 			    except Exception,e:
