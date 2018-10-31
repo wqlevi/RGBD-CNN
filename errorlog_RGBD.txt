@@ -500,3 +500,29 @@ F1002 18:17:57.129706 12702 gpu_memory.hpp:27] Out of memory: failed to allocate
 *** Check failure stack trace: ***
 Aborted (core dumped)
 
+I0909 10:14:36.436034  2927 net.cpp:264] This network produces output loss
+I0909 10:14:36.436053  2927 net.cpp:284] Network initialization done.
+I0909 10:14:36.436132  2927 solver.cpp:60] Solver scaffolding done.
+I0909 10:14:36.436681  2927 caffe.cpp:135] Finetuning from /home/pavel/fcn-alexnet-pascal.caffemodel
+I0909 10:14:40.780787  2927 net.cpp:791] Ignoring source layer score_fr
+I0909 10:14:40.780812  2927 net.cpp:791] Ignoring source layer upscore
+I0909 10:14:40.781679  2927 caffe.cpp:231] Starting Optimization
+I0909 10:14:40.781688  2927 solver.cpp:304] Solving
+I0909 10:14:40.781690  2927 solver.cpp:305] Learning Rate Policy: step
+F0909 10:14:43.201426  2927 math_functions.cu:142] Check failed: status == CUBLAS_STATUS_SUCCESS (11 vs. 0)  CUBLAS_STATUS_MAPPING_ERROR
+*** Check failure stack trace: ***
+@     0x7fa6ee3e95cd  google::LogMessage::Fail()
+@     0x7fa6ee3eb433  google::LogMessage::SendToLog()
+@     0x7fa6ee3e915b  google::LogMessage::Flush()
+@     0x7fa6ee3ebe1e  google::LogMessageFatal::~LogMessageFatal()
+@     0x7fa6eeb9845a  caffe::caffe_gpu_asum<>()
+@     0x7fa6eeb7b527  caffe::SoftmaxWithLossLayer<>::Forward_gpu()
+@     0x7fa6eeaade42  caffe::Net<>::ForwardFromTo()
+@     0x7fa6eeaadf67  caffe::Net<>::Forward()
+@     0x7fa6eeaa56bc  caffe::Solver<>::Step()
+@     0x7fa6eeaa6339  caffe::Solver<>::Solve()
+@           0x40c6d7  train()
+@           0x408668  main
+@     0x7fa6ece3b830  __libc_start_main
+@           0x408dd9  _start
+@              (nil)  (unknown)
