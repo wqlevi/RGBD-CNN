@@ -511,10 +511,6 @@ I0909 10:14:40.781688  2927 solver.cpp:304] Solving
 I0909 10:14:40.781690  2927 solver.cpp:305] Learning Rate Policy: step
 F0909 10:14:43.201426  2927 math_functions.cu:142] Check failed: status == CUBLAS_STATUS_SUCCESS (11 vs. 0)  CUBLAS_STATUS_MAPPING_ERROR
 *** Check failure stack trace: ***
-@     0x7fa6ee3e95cd  google::LogMessage::Fail()
-@     0x7fa6ee3eb433  google::LogMessage::SendToLog()
-@     0x7fa6ee3e915b  google::LogMessage::Flush()
-@     0x7fa6ee3ebe1e  google::LogMessageFatal::~LogMessageFatal()
 @     0x7fa6eeb9845a  caffe::caffe_gpu_asum<>()
 @     0x7fa6eeb7b527  caffe::SoftmaxWithLossLayer<>::Forward_gpu()
 @     0x7fa6eeaade42  caffe::Net<>::ForwardFromTo()
